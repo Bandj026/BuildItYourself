@@ -16,3 +16,4 @@ MonoBehaviour:
   name: Earth
   scale: {x: 0.15, y: 0.15, z: 0.15}
   mat: {fileID: 2100000, guid: 30bcb53ae2a0e6a47bd407578cf25147, type: 2}
+  gravity: -9.81

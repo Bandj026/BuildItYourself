@@ -16,3 +16,4 @@ MonoBehaviour:
   name: Neptune
   scale: {x: 0.19, y: 0.19, z: 0.19}
   mat: {fileID: 2100000, guid: 15e532a5ff8640f4da5259aa7cf6b872, type: 2}
+  gravity: -11.15

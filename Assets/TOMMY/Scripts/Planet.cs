@@ -9,5 +9,6 @@ public class Planet : ScriptableObject
     public new string name;
     public Vector3 scale;
     public Material mat;
+    public float gravity;
 
 }

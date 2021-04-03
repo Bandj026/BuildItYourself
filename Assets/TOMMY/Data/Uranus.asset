@@ -16,3 +16,4 @@ MonoBehaviour:
   name: Uranus
   scale: {x: 0.2, y: 0.2, z: 0.2}
   mat: {fileID: 2100000, guid: 483836936648cfa48811e87676165073, type: 2}
+  gravity: -8.87

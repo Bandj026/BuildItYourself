@@ -16,3 +16,4 @@ MonoBehaviour:
   name: Sun
   scale: {x: 0.3, y: 0.3, z: 0.3}
   mat: {fileID: 2100000, guid: 4e1772b0e525c6d469c946e8af3ab0d0, type: 2}
+  gravity: -274

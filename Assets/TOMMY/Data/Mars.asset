@@ -16,3 +16,4 @@ MonoBehaviour:
   name: Mars
   scale: {x: 0.12, y: 0.12, z: 0.12}
   mat: {fileID: 2100000, guid: 67bdf3a3d5bc0b048b090871c74bfdf2, type: 2}
+  gravity: -3.721

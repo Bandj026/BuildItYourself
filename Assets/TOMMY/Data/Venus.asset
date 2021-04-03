@@ -16,3 +16,4 @@ MonoBehaviour:
   name: Venus
   scale: {x: 0.15, y: 0.15, z: 0.15}
   mat: {fileID: 2100000, guid: 2b617377194de624fa47f6eb3aee5377, type: 2}
+  gravity: -8.87

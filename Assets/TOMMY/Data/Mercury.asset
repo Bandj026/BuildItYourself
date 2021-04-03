@@ -16,3 +16,4 @@ MonoBehaviour:
   name: Mercury
   scale: {x: 0.1, y: 0.1, z: 0.1}
   mat: {fileID: 2100000, guid: aad26ecfb2fb38849b8e35f935099665, type: 2}
+  gravity: -3.7

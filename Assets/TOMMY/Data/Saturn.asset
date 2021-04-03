@@ -16,3 +16,4 @@ MonoBehaviour:
   name: Saturn
   scale: {x: 0.22, y: 0.22, z: 0.22}
   mat: {fileID: 2100000, guid: 8aaaaf6a08f41414e851fa5320adaba3, type: 2}
+  gravity: -10.44

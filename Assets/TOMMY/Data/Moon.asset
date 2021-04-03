@@ -16,3 +16,4 @@ MonoBehaviour:
   name: Moon
   scale: {x: 0.07, y: 0.07, z: 0.07}
   mat: {fileID: 2100000, guid: 138f4981980d7914ba801b2596b1388f, type: 2}
+  gravity: -1.62
