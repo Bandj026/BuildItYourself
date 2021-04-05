@@ -6,12 +6,13 @@ public class PlanetDetector : MonoBehaviour
 {
 
     public GameObject selectedPlanet;
+    public MeshRenderer emitter;
     //public MeshRenderer selectedPlanet;
     MeshRenderer planetRenderer;
     BasicInteractable interactable;
     public bool planetDetected = false;
 
-    //public Material defaultMat;
+    public Material emitterGreen;
 
     private void Start()
     {
@@ -28,7 +29,9 @@ public class PlanetDetector : MonoBehaviour
             Planet chosen = other.GetComponent<PlanetData>().planet;
             planetRenderer.material = chosen.mat;
             interactable.enabled = true;
-            
+            emitter.material = emitterGreen;
+
+
         }
     }
 

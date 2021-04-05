@@ -1,0 +1,14 @@
+/ 3340.8) *4 = 835
+
+https://solarsystem.nasa.gov/planet-compare/
+
+Orbit stats:
+Sun: N/A, 
+mercury: 28.8 sec orbit, 0.052 rotations / second
+venus: 73.824 sec orbit, inverted direction & 0.0125 rotations/second
+earth: 2 min orbit, 3.04 rotations / second
+mars: 3.762 min orbit, 3.11904 rotations / second
+Jupiter: 23.7252 min orbit, 7.3512 rotations / second
+Saturn: 58.894 min orbit, 6.847 rotations / second
+Uranus: 168.034 min orbit, inverted direction & 4.234 rotations / second
+Neptune: 329.583 min orbit, 4.531 rotations / second
