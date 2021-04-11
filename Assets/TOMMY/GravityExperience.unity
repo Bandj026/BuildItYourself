@@ -5157,6 +5157,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 283134326}
+        m_TargetAssemblyTypeName: StopwatchScript, Assembly-CSharp
+        m_MethodName: Reset
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onButtonUp:
     m_PersistentCalls:
       m_Calls:
@@ -5257,6 +5269,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.22999999, y: 0.09999998, z: 0.22999996}
   m_Center: {x: -0.114999995, y: 0.050000943, z: 0.11500189}
+--- !u!114 &283134326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 283134320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92348191638a78f4bae88ae603702747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txt: {fileID: 692187285}
 --- !u!1 &289104847
 GameObject:
   m_ObjectHideFlags: 0
@@ -18732,7 +18757,7 @@ GameObject:
   - component: {fileID: 1117263611}
   - component: {fileID: 1117263610}
   m_Layer: 0
-  m_Name: StopwatchCanvas (1)
+  m_Name: StopwatchButtonCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19498,6 +19523,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1135118309}
+        m_TargetAssemblyTypeName: StopwatchScript, Assembly-CSharp
+        m_MethodName: Stop
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onButtonUp:
     m_PersistentCalls:
       m_Calls:
@@ -19520,6 +19557,19 @@ MonoBehaviour:
   engaged: 0
   buttonDown: 0
   buttonUp: 0
+--- !u!114 &1135118309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135118303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92348191638a78f4bae88ae603702747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txt: {fileID: 692187285}
 --- !u!1001 &1135962906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28791,6 +28841,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1655820022}
   m_CullTransparentMesh: 1
+--- !u!1 &1658421260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9085932155165213712, guid: bc2fde09ae7b4684aa058ebdac157fac,
+    type: 3}
+  m_PrefabInstance: {fileID: 1672460200}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1658421261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1658421260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92348191638a78f4bae88ae603702747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txt: {fileID: 692187285}
 --- !u!1001 &1667657090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28972,7 +29041,7 @@ PrefabInstance:
     - target: {fileID: 8275046514942975988, guid: bc2fde09ae7b4684aa058ebdac157fac,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8275046514961971928, guid: bc2fde09ae7b4684aa058ebdac157fac,
         type: 3}
@@ -29074,7 +29143,8 @@ PrefabInstance:
       propertyPath: previewRightInstance
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8275046514942975988, guid: bc2fde09ae7b4684aa058ebdac157fac, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: bc2fde09ae7b4684aa058ebdac157fac, type: 3}
 --- !u!1 &1675192966
 GameObject:
@@ -34868,6 +34938,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2026711469}
+        m_TargetAssemblyTypeName: StopwatchScript, Assembly-CSharp
+        m_MethodName: Start
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onButtonUp:
     m_PersistentCalls:
       m_Calls:
@@ -34890,6 +34972,19 @@ MonoBehaviour:
   engaged: 0
   buttonDown: 0
   buttonUp: 0
+--- !u!114 &2026711469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026711463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92348191638a78f4bae88ae603702747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txt: {fileID: 692187285}
 --- !u!1 &2031757272
 GameObject:
   m_ObjectHideFlags: 0

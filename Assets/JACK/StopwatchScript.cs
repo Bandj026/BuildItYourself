@@ -1,32 +1,20 @@
 using System;
+using System.Diagnostics;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using Valve.VR;
 using Valve.VR.InteractionSystem;
+using Debug=UnityEngine.Debug;
 
 public class StopwatchScript : MonoBehaviour
 {
-    /*//Variable for grabbing the desired actionset
-    public SteamVR_ActionSet m_ActionSet;
-    // varaibles for storing if the touchpads have been used on the controller
-    public SteamVR_Action_Vector2 m_TouchPosition;
-    // varaible for storing player speed
-    private float m_Speed = 0.0f;
-    // varaible for storing the character controller
-    private CharacterController m_CharacterController = null;
-    //location values for the player position and the head position
-    private Transform m_CameraRig = null;
-    private Transform m_Head = null;
-    //sets the deadzone for how far the player needs to move their thumb before
-    public Vector2 m_deadzone = new Vector2(0.1f, 0.1f);
-    public Vector2 m_NeutralPosition = new Vector2(0.0f, 0.0f);*/
-
-
 
     public Text txt;
+    public Stopwatch timer = new Stopwatch();
 
     private void Awake()
     {
@@ -52,10 +40,26 @@ public class StopwatchScript : MonoBehaviour
 
         txt.text = delta.y.ToString();
 	txt.text = "hi there";*/
+	TimeSpan ts = timer.Elapsed;
+	txt.text = ts.ToString();
     }
 
     public void testTime(Hand fromHand)
     {
         txt.text = "you did it!";
+    }
+
+    public void Start(Hand fromHand)
+    {
+        timer.Start();
+    }
+    public void Stop(Hand fromHand)
+    {
+        timer.Stop();
+    }
+    public void Reset(Hand fromHand)
+    {
+        timer.Stop();
+	timer.Restart();
     }
 }
