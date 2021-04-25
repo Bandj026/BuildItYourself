@@ -6,9 +6,8 @@ public class Col4 : MonoBehaviour
 {
     //bool touchCon4 = false;
 
-    Light Awake()
+    Light Awakex()
     {
-
         Light myLight = GameObject.Find("SpotLight").GetComponent<Light>();
         myLight.enabled = false;
         return myLight;
@@ -18,35 +17,35 @@ public class Col4 : MonoBehaviour
 
     void OnTriggerStay(Collider col)
     {
-        Light myLight = Awake();
+        Light myLight = Awakex();
 
-        if (col.gameObject.name == "Block1" || col.gameObject.name == "Block2") { 
-        
+        if (col.gameObject.name == "Block1" || col.gameObject.name == "Block2")
+        {
             myLight.enabled = true;
-            Debug.Log("TOUCHINGB" );
+            Debug.Log("TOUCHINGB");
 
         }
         else
         {
             //touchCon4 = false; 
             myLight.enabled = false;
-            Debug.Log("NOT TOUCHINGB" );
+            Debug.Log("NOT TOUCHINGB");
         }
     }
 
-    
+
 
 
     void OnTriggerExit(Collider col)
-        {
-            Light myLight = Awake();
-            
-            //touchCon4 = false;
-            myLight.enabled = false;
-            Debug.Log("NOT TOUCHING" );
-        }
+    {
+        Light myLight = Awakex();
+
+        //touchCon4 = false;
+        myLight.enabled = false;
+        Debug.Log("NOT TOUCHING");
+    }
 
 
 
-    
+
 }

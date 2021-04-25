@@ -6,7 +6,7 @@ public class col3 : MonoBehaviour
 {
     //bool touchCon4 = false;
 
-    Light Awake()
+    Light Awakex()
     {
 
         Light myLight = GameObject.Find("SpotLight2").GetComponent<Light>();
@@ -18,7 +18,7 @@ public class col3 : MonoBehaviour
 
     void OnTriggerStay(Collider col)
     {
-        Light myLight = Awake();
+        Light myLight = Awakex();
 
         if (col.gameObject.name == "Block1" || col.gameObject.name == "Block2")
         {
@@ -39,7 +39,7 @@ public class col3 : MonoBehaviour
 
     void OnTriggerExit(Collider col)
     {
-        Light myLight = Awake();
+        Light myLight = Awakex();
 
         //touchCon4 = false;
         myLight.enabled = false;
