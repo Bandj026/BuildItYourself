@@ -7,7 +7,7 @@ public class onCollisionLIght : MonoBehaviour
 {
 
 
-    Light Awake() {
+    Light Awakex() {
 
         Light myLight = GameObject.Find("PointLight").GetComponent<Light>();
         myLight.enabled = false;
@@ -22,7 +22,7 @@ public class onCollisionLIght : MonoBehaviour
     // Start is called before the first frame update
     void OnTriggerStay(Collider col) 
     { 
-        Light myLight = Awake();
+        Light myLight = Awakex();
         
             if (col.gameObject.name == "Connector1")
             {
@@ -47,7 +47,7 @@ public class onCollisionLIght : MonoBehaviour
     }
 
     void Update() {
-        Light myLight = Awake();
+        Light myLight = Awakex();
      if (touchCon1 == true && touchCon2 == true)
      {
      myLight.enabled = true;
@@ -56,7 +56,7 @@ public class onCollisionLIght : MonoBehaviour
    }
 
     void OnTriggerExit(Collider col) {
-        Light myLight = Awake();
+        Light myLight = Awakex();
 
         
         touchCon1 = false;
