@@ -9,7 +9,9 @@ public class PendulumMassDriver : MonoBehaviour
     public Text txt;
     public Rigidbody rigidbody;
     public LinearMapping linearMapping;
-    public float value;
+    public float value = 50;
+
+    private float oldValue = 0;
     
     // Start is called before the first frame update
     void Start()
@@ -31,9 +33,14 @@ public class PendulumMassDriver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        value = (int) (linearMapping.value * 100);
-        txt.text = "Bulb Mass: " + value.ToString();
-        //txt.text = "hello";
-        rigidbody.mass = value;
+        if(linearMapping.value != oldValue) // done to improve performance
+        {
+            value = (int)(linearMapping.value * 100);
+            txt.text = "Bulb Mass: " + value.ToString();
+            //txt.text = "hello";
+            rigidbody.mass = value;
+            oldValue = linearMapping.value;
+        }
+        
     }
 }

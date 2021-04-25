@@ -29034,6 +29034,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -11.29878
       objectReference: {fileID: 0}
+    - target: {fileID: 8229626119447526027, guid: bc2fde09ae7b4684aa058ebdac157fac,
+        type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8275046513599901214, guid: bc2fde09ae7b4684aa058ebdac157fac,
         type: 3}
       propertyPath: m_IsActive
@@ -29103,6 +29108,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PendulumDemo
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275046514961971935, guid: bc2fde09ae7b4684aa058ebdac157fac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275046515303878167, guid: bc2fde09ae7b4684aa058ebdac157fac,
+        type: 3}
+      propertyPath: value
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 8275046515303878191, guid: bc2fde09ae7b4684aa058ebdac157fac,
         type: 3}

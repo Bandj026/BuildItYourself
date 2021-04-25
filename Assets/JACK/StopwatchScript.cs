@@ -41,7 +41,11 @@ public class StopwatchScript : MonoBehaviour
         txt.text = delta.y.ToString();
 	txt.text = "hi there";*/
 	TimeSpan ts = timer.Elapsed;
-	txt.text = ts.ToString().Remove(8);
+    if(ts.ToString().Length > 8)
+        {
+            txt.text = ts.ToString().Remove(8);
+        }
+	
     }
 
     
