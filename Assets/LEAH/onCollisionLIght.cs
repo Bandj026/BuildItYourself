@@ -36,14 +36,6 @@ public class onCollisionLIght : MonoBehaviour
                 //Debug.Log(gameObject.name + "Has collided with" + col.gameObject.name + touchCon2 + touchCon1);
             }
 
-        else
-            {
-                touchCon1 = false;
-                touchCon2 = false;
-               // Debug.Log("Not touching");
-            }
-
-
     }
 
     void Update() {

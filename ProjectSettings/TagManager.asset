@@ -8,6 +8,9 @@ TagManager:
   - FxTemporaire
   - Planet
   - Selection
+  - lightConnector
+  - FanConnector
+  - Connector
   layers:
   - Default
   - TransparentFX
