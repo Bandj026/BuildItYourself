@@ -5,6 +5,9 @@ using UnityEngine;
 public class Whiteboard : MonoBehaviour
 {
 
+    // credit: https://www.youtube.com/watch?v=Rir4A1cr03E
+    // used for general implementation concept, and main Update code is pretty much from here.
+
     private int textureSize = 2048;
 
     public Texture2D texture;

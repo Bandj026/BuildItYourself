@@ -6,6 +6,8 @@ using UnityEngine;
 public class Pen : MonoBehaviour
 {
 
+    // credit: https://www.youtube.com/watch?v=Rir4A1cr03E
+    // used for basic implementation; I added support for multiple pen colours & sizes as well as multiple whiteboards. Also added erasers.
     public int penSize;
     public Color penColor;
     public Color[] color;
@@ -15,6 +17,8 @@ public class Pen : MonoBehaviour
     public GameObject pos;
 
     private Whiteboard currentBoard;
+
+    public bool isEraser = false; // used to change raycast direction
 
 
     private void OnCollisionEnter(Collision collision)
@@ -27,7 +31,17 @@ public class Pen : MonoBehaviour
         //if (collision.collider.tag == "WritableSurface")
         //{
         // send a raycast out to the whiteboard
-        if (Physics.Raycast(transform.position, transform.right, out touchPos, 0.025f))
+        Vector3 dir;
+
+        if(isEraser)
+        {
+            dir = -transform.up;
+        } else
+        {
+            dir = transform.right;
+        }
+
+        if (Physics.Raycast(transform.position, dir, out touchPos, 0.025f))
         {
             if(touchPos.collider.tag == "Whiteboard_Surface")
             {
@@ -47,6 +61,7 @@ public class Pen : MonoBehaviour
                 if(currentBoard != null)
                 {
                     currentBoard.UpdateTouching(false);
+                    currentBoard = null;
                 }
                 
             }
@@ -57,6 +72,7 @@ public class Pen : MonoBehaviour
             if (currentBoard != null)
             {
                 currentBoard.UpdateTouching(false);
+                currentBoard = null;
             }
         }
         // collision.gameObject.GetComponent<Whiteboard>().UpdateWhiteboard(this.transform.position,penColor, penSize);
