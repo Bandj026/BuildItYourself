@@ -2573,7 +2573,7 @@ GameObject:
   - component: {fileID: 162256597}
   m_Layer: 0
   m_Name: Whiteboard_Back
-  m_TagString: Untagged
+  m_TagString: Whiteboard_Surface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2592,8 +2592,8 @@ Transform:
   m_Father: {fileID: 4713978821775487593}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &162256597
-BoxCollider:
+--- !u!64 &162256597
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2602,9 +2602,10 @@ BoxCollider:
   m_Material: {fileID: 13400000, guid: 975ca314555b94940b3b0dabc402485e, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.01}
-  m_Center: {x: 0, y: 0, z: 0.005}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &162256598
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10259,11 +10260,11 @@ GameObject:
   - component: {fileID: 584642310}
   - component: {fileID: 584642313}
   - component: {fileID: 584642312}
-  - component: {fileID: 584642311}
   - component: {fileID: 584642314}
+  - component: {fileID: 584642311}
   m_Layer: 0
   m_Name: Whiteboard_Front
-  m_TagString: Untagged
+  m_TagString: Whiteboard_Surface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10282,8 +10283,8 @@ Transform:
   m_Father: {fileID: 4713978821775487593}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!65 &584642311
-BoxCollider:
+--- !u!64 &584642311
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -10292,9 +10293,10 @@ BoxCollider:
   m_Material: {fileID: 13400000, guid: 975ca314555b94940b3b0dabc402485e, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.01}
-  m_Center: {x: 0, y: 0, z: 0.005}
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &584642312
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25672,8 +25674,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cd9fd4d7e8d70f4c81c409d9f88bc2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  penSize: 5
+  penSize: 10
   penColor: {r: 0, g: 0, b: 0, a: 0}
+  color: []
   pos: {fileID: 234003391}
 --- !u!135 &1495213464
 SphereCollider:

@@ -11,6 +11,7 @@ TagManager:
   - lightConnector
   - FanConnector
   - Connector
+  - Whiteboard_Surface
   layers:
   - Default
   - TransparentFX
