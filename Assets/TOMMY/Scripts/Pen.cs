@@ -14,6 +14,8 @@ public class Pen : MonoBehaviour
 
     public GameObject pos;
 
+    private Whiteboard currentBoard;
+
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -25,24 +27,37 @@ public class Pen : MonoBehaviour
         //if (collision.collider.tag == "WritableSurface")
         //{
         // send a raycast out to the whiteboard
-        if (Physics.Raycast(transform.position, transform.right, out touchPos, 0.01f))
+        if (Physics.Raycast(transform.position, transform.right, out touchPos, 0.025f))
         {
             if(touchPos.collider.tag == "Whiteboard_Surface")
             {
                 //Debug.Log("Hit Surface - " + touchPos.collider.gameObject.name);
                 //pos.transform.position = touchPos.point;
 
-                Whiteboard board = touchPos.collider.GetComponent<Whiteboard>();
+                currentBoard = touchPos.collider.GetComponent<Whiteboard>();
 
                 // generate texture blob with correct colour (basically an array of colours, the length of the number of pixels to be drawn)
                 color = Enumerable.Repeat(penColor, penSize * penSize).ToArray();
 
                 Debug.Log("Texture Coords: " + touchPos.textureCoord);
-
-                board.UpdateWhiteboard(touchPos.textureCoord, color, penSize);
+                currentBoard.UpdateTouching(true);
+                currentBoard.UpdateWhiteboard(touchPos.textureCoord, color, penSize);
+            } else
+            {
+                if(currentBoard != null)
+                {
+                    currentBoard.UpdateTouching(false);
+                }
+                
             }
             
 
+        } else
+        {
+            if (currentBoard != null)
+            {
+                currentBoard.UpdateTouching(false);
+            }
         }
         // collision.gameObject.GetComponent<Whiteboard>().UpdateWhiteboard(this.transform.position,penColor, penSize);
         //}

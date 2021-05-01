@@ -45,7 +45,7 @@ public class Whiteboard : MonoBehaviour
             // Set base touch pixels
             texture.SetPixels(x, y, penSize, penSize, penColor);
 
-            // Interpolate pixels from previous touch
+            // Interpolate pixels from previous touch (so that we get a smooth line)
             for (float t = 0.01f; t < 1.00f; t += 0.01f)
             {
                 int lerpX = (int)Mathf.Lerp(lastX, (float)x, t);
@@ -66,13 +66,16 @@ public class Whiteboard : MonoBehaviour
         this.touchingLast = this.touching;
     }
 
+    public void UpdateTouching(bool temp) // so that we can properly detect when touching the board.
+    {
+        touching = temp;
+    }
+
     public void UpdateWhiteboard(Vector2 position, Color[] color, int size)
     {
         penPosition = position;
         penColor = color;
         penSize = size;
-
-        touching = true;
         
     }
 
