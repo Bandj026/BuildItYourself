@@ -26,6 +26,17 @@ public class Whiteboard : MonoBehaviour
     {
         thisWhiteboard = new Material(Shader.Find("Standard"));
         texture = new Texture2D(textureSize, textureSize);
+        // make sure the texture is all white
+        Color[] pixels = texture.GetPixels();
+
+        for(int i = 0; i < pixels.Length; i++)
+        {
+            pixels[i] = Color.white;
+        }
+
+        texture.SetPixels(pixels);
+        texture.Apply();
+
         // generate a new material with the same properties as the default.
         Renderer renderer = this.GetComponent<Renderer>(); 
         thisWhiteboard.CopyPropertiesFromMaterial(renderer.material);

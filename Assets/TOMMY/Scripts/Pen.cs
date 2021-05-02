@@ -41,7 +41,7 @@ public class Pen : MonoBehaviour
             dir = transform.right;
         }
 
-        if (Physics.Raycast(transform.position, dir, out touchPos, 0.025f))
+        if (Physics.Raycast(transform.position, dir, out touchPos, 0.015f))
         {
             if(touchPos.collider.tag == "Whiteboard_Surface")
             {
