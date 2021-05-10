@@ -65,7 +65,7 @@ public class WaypointCircuit : Waypoint
     /// </summary>
     public void cleanOldestWaypoint()
     {
-        Destroy(transform.FindChild("Waypoint " + toStringOfXdigits(minChildrenIndx++)).gameObject);
+        Destroy(transform.Find("Waypoint " + toStringOfXdigits(minChildrenIndx++)).gameObject);
         //updatePointsList();
     }
 

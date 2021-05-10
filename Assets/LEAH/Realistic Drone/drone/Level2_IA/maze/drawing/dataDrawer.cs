@@ -34,8 +34,8 @@ public class dataDrawer : MonoBehaviour {
     {
         dC = GetComponent<dataCollector>();
 
-        wallspinscontainer = transform.FindChild("wallspinscontainer");
-        dronepinscontainer = transform.FindChild("dronepinscontainer");
+        wallspinscontainer = transform.Find("wallspinscontainer");
+        dronepinscontainer = transform.Find("dronepinscontainer");
 
         lr = gameObject.AddComponent<LineRenderer>();
         lr.SetVertexCount(5);

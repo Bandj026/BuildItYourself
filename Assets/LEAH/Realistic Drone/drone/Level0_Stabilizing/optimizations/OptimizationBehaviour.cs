@@ -31,7 +31,7 @@ public abstract class OptimizationBehaviour : MonoBehaviour {
     private void hideBody(bool b)
     {
         if (!b) return;
-        transform.FindChild("Body").gameObject.SetActive(false);
+        transform.Find("Body").gameObject.SetActive(false);
         transform.GetChild(1).GetComponent<MeshRenderer>().enabled = false;
         transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
         transform.GetChild(4).GetComponent<MeshRenderer>().enabled = false;
