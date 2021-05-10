@@ -19,14 +19,17 @@ public class Connector : MonoBehaviour
         if (lightA.connected && lightB.connected)
         {
             lamp.SetActive(true);
+
+            if (FanA.connected && FanB.connected)
+            {
+                fan.transform.Rotate(new Vector3(0f, 0f, 300f) * Time.deltaTime, Space.Self);
+            }
+
         } else
         {
             lamp.SetActive(false);
         }
 
-        if(FanA.connected && FanB.connected)
-        {
-            fan.transform.Rotate(new Vector3(0f, 0f, 300f) * Time.deltaTime, Space.Self);
-        }
+        
     }
 }
