@@ -42,16 +42,17 @@ public class DroneFlyPhysics : MonoBehaviour
         foreach(Transform engine in engines)
         {
             engine.Rotate(Vector3.forward * 15000 * 2.5f * throttle * Time.deltaTime);
-        }
-        if(rb.velocity.magnitude > 0.1f & throttle > 0.4f)
-        {
-            transform.eulerAngles = new Vector3(movementDir.x * 30, 0, movementDir.y * 30);
-        }
+        }        
         
     }
     // for updating physics (prevents framerate-limited physics issues)
     private void FixedUpdate()
     {
+        if (rb.velocity.magnitude > 0.1f & throttle > 0.4f)
+        {
+            rb.rotation = Quaternion.Euler(movementDir.x * 30, 0, movementDir.y * 30);
+        }
+
         foreach (Transform engine in engines)
         {
             rb.AddForceAtPosition(engine.forward * throttle * 4.5f, engine.position);
