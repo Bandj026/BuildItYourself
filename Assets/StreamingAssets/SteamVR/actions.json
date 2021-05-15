@@ -81,6 +81,18 @@
       "name": "/actions/mixedreality/in/ExternalCamera",
       "type": "pose",
       "requirement": "optional"
+    },
+    {
+      "name": "/actions/drone/in/Steering",
+      "type": "vector2"
+    },
+    {
+      "name": "/actions/drone/in/Throttle",
+      "type": "vector1"
+    },
+    {
+      "name": "/actions/drone/in/Reset",
+      "type": "boolean"
     }
   ],
   "action_sets": [
@@ -98,6 +110,10 @@
     },
     {
       "name": "/actions/mixedreality",
+      "usage": "single"
+    },
+    {
+      "name": "/actions/drone",
       "usage": "single"
     }
   ],

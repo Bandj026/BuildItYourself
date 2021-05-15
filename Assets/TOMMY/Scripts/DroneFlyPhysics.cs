@@ -13,6 +13,13 @@ public class DroneFlyPhysics : MonoBehaviour
     public Slider movementXDir;
     public Slider movementZDir;
 
+    public bool usingSlider = true;
+
+    // for when using the VR controller
+    public Vector2 movementDir;
+    public float throttle;
+
+
     private Rigidbody rb;
 
     public Transform[] engines;
@@ -26,13 +33,19 @@ public class DroneFlyPhysics : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(usingSlider)
+        {
+            movementDir = new Vector2(movementXDir.value, movementZDir.value);
+            throttle = engineSpeed.value;
+        }
+
         foreach(Transform engine in engines)
         {
-            engine.Rotate(Vector3.forward * 15000 * 2.5f * engineSpeed.value * Time.deltaTime);
+            engine.Rotate(Vector3.forward * 15000 * 2.5f * throttle * Time.deltaTime);
         }
-        if(rb.velocity.magnitude > 0.1f)
+        if(rb.velocity.magnitude > 0.1f & throttle > 0.4f)
         {
-            this.transform.eulerAngles = new Vector3(movementZDir.value * 30, 0, movementXDir.value * 30);
+            transform.eulerAngles = new Vector3(movementDir.x * 30, 0, movementDir.y * 30);
         }
         
     }
@@ -41,7 +54,7 @@ public class DroneFlyPhysics : MonoBehaviour
     {
         foreach (Transform engine in engines)
         {
-            rb.AddForceAtPosition(engine.forward * engineSpeed.value * 4.5f, engine.position);
+            rb.AddForceAtPosition(engine.forward * throttle * 4.5f, engine.position);
         }
     }
 }
