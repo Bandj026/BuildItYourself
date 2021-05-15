@@ -10,6 +10,8 @@ public class DroneFlyPhysics : MonoBehaviour
     // https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions.
 
     public Slider engineSpeed;
+    public Slider movementXDir;
+    public Slider movementZDir;
 
     private Rigidbody rb;
 
@@ -28,6 +30,11 @@ public class DroneFlyPhysics : MonoBehaviour
         {
             engine.Rotate(Vector3.forward * 15000 * 2.5f * engineSpeed.value * Time.deltaTime);
         }
+        if(rb.velocity.magnitude > 0.1f)
+        {
+            this.transform.eulerAngles = new Vector3(movementZDir.value * 30, 0, movementXDir.value * 30);
+        }
+        
     }
     // for updating physics (prevents framerate-limited physics issues)
     private void FixedUpdate()
