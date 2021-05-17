@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Connector : MonoBehaviour
+public class Connector2 : MonoBehaviour
 {
+
     public ConnectorDetector lightA;
     public ConnectorDetector lightB;
 
@@ -15,7 +16,6 @@ public class Connector : MonoBehaviour
     public Text ChangingText;
     public GameObject fan;
 
-    public conMaterial mat;
 
 
     // Update is called once per frame
@@ -24,7 +24,6 @@ public class Connector : MonoBehaviour
         if (lightA.connected && lightB.connected)
         {
             lamp.SetActive(true);
-            
             TextChange();
 
             if (FanA.connected && FanB.connected)
@@ -32,27 +31,20 @@ public class Connector : MonoBehaviour
                 fan.transform.Rotate(new Vector3(0f, 0f, 300f) * Time.deltaTime, Space.Self);
             }
 
-        } else
+        }
+        else
         {
             lamp.SetActive(false);
         }
 
-        
+
     }
 
     public void TextChange()
     {
-        if (mat.mat == "gold")
-        {
-            ChangingText.text = "gold";
-        }
-        else {
+       
+            ChangingText.text = "SecondBlock";
 
-            ChangingText.text = "silver";
-        }
-
-        
-        
 
 
     }
