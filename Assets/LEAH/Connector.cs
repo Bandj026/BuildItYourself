@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Connector : MonoBehaviour
 {
@@ -12,22 +13,25 @@ public class Connector : MonoBehaviour
     public ConnectorDetector FanB;
 
     public GameObject lamp;
-    public Text ChangingText;
+    public TextMeshProUGUI textUI;
     public GameObject fan;
 
     public conMaterial mat;
 
-
     // Update is called once per frame
     void Update()
     {
-        if (lightA.connected && lightB.connected)
+        if (lightA.connected == true && lightB.connected == true)
         {
             lamp.SetActive(true);
             
-            TextChange();
+            if((lightA.something == this.gameObject && lightB.something == this.gameObject))
+            {
+                print(mat.mat);
+                textUI.text = mat.mat;
+            }
 
-            if (FanA.connected && FanB.connected)
+            if (FanA.connected == true && FanB.connected == true)
             {
                 fan.transform.Rotate(new Vector3(0f, 0f, 300f) * Time.deltaTime, Space.Self);
             }
@@ -38,23 +42,6 @@ public class Connector : MonoBehaviour
         }
 
         
-    }
-
-    public void TextChange()
-    {
-        if (mat.mat == "gold")
-        {
-            ChangingText.text = "gold";
-        }
-        else {
-
-            ChangingText.text = "silver";
-        }
-
-        
-        
-
-
     }
 
 

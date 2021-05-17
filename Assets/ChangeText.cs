@@ -20,11 +20,4 @@ public class ChangeText : MonoBehaviour
     {
         
     }
-
-    public void TextChange() {
-
-
-        ChangingText.text = "6.30x10^7";
-
-    }
 }

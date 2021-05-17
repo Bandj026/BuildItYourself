@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class ConnectorDetector : MonoBehaviour
 {
-    public bool connected = false;
+    //public bool connected = false;
+    public bool connected;
+    public GameObject something;
 
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Connector")
         {
             connected = true;
+            something = other.GetComponent<Collider>().transform.gameObject;
         }
     }
 
@@ -19,6 +22,7 @@ public class ConnectorDetector : MonoBehaviour
         if (other.tag == "Connector")
         {
             connected = false;
+            something = other.GetComponent<Collider>().transform.gameObject;
         }
     }
 
