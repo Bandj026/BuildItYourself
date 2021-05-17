@@ -12,6 +12,7 @@ TagManager:
   - FanConnector
   - Connector
   - Whiteboard_Surface
+  - Drone
   layers:
   - Default
   - TransparentFX
