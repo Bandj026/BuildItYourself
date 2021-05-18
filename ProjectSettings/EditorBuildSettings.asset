@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/TOMMY/Player.unity
+    path: Assets/Environments/Main scene/Player.unity
     guid: a2ec1631bc652514d94dacc5623bdfaa
   - enabled: 1
-    path: Assets/TOMMY/GravityExperience.unity
+    path: Assets/Environments/Main scene/GravityExperience.unity
     guid: b223433fbe07b124cae3f0cc42ee1688
   - enabled: 1
-    path: Assets/TOMMY/SolarSystem.unity
+    path: Assets/Environments/Main scene/SolarSystem.unity
     guid: 1dcac326e95c78944988b90e419cc52f
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 1a4c74a968a0fcc49860f9876989b742,
