@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ae4bbba76d725b7489cd9ab815f00b89, type: 3}
-  m_Name: silver
+  m_Name: LEad
   m_EditorClassIdentifier: 
-  mat: "Silver   6.30\xD710^ 7"
+  mat: "Pure lead 4.55\xD710^ 6"

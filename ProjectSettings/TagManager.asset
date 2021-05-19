@@ -13,6 +13,7 @@ TagManager:
   - Connector
   - Whiteboard_Surface
   - Drone
+  - testChild
   layers:
   - Default
   - TransparentFX
