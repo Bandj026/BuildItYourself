@@ -1,6 +1,7 @@
 # BuildItYourself
 
 Build it yourself is a VR framework featuring a number of useful tools, designed to make it easy to create useful environments for education in VR.
+Built using Unity 2020.7.2f1.
 
 ### Current Featues
 - SteamVR-based, supports all PC VR headsets
