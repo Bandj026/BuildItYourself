@@ -16,3 +16,6 @@ All VR headsets that support SteamVR should work, and it is confirmed to work on
 - HTC Vive
 - Valve Index
 - Oculus Quest 2 (Over Link Cable)
+
+### How to use
+- Open the Scene GravityExperience.unity
