@@ -3,6 +3,8 @@
 Build it yourself is a VR framework featuring a number of useful tools, designed to make it easy to create useful environments for education in VR.
 Built using Unity 2020.7.2f1.
 
+This repo is in active development, so items below may break at any time as they are updated.
+
 ### Current Featues
 - SteamVR-based, supports all PC VR headsets
 - Fully functional whiteboard
