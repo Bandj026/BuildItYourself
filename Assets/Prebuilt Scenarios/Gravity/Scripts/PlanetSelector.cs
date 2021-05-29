@@ -21,12 +21,12 @@ public class PlanetSelector : MonoBehaviour
     public void LoadModel()
     {
         Debug.Log("Loading Model..");
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 
     public void LoadLab()
     {
         Debug.Log("Loading Lab...");
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 }
