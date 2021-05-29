@@ -33,7 +33,7 @@ public class Connector : MonoBehaviour
 
             if (FanA.connected == true && FanB.connected == true)
             {
-                fan.transform.Rotate(new Vector3(0f, 0f, 300f) * Time.deltaTime, Space.Self);
+                fan.transform.Rotate(new Vector3(0f, 0f, 150f) * Time.deltaTime, Space.Self);
             }
 
         } else

@@ -8,7 +8,12 @@ public class makeParent : MonoBehaviour
 
 {
 
-    public GameObject child1;
+    public GameObject childx;
+    public Transform newParent;
+    public float x;
+    public float y;
+    public float z;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,13 +26,14 @@ public class makeParent : MonoBehaviour
         Debug.Log("entered ");
         
         
-        if (other.gameObject.name ==  child1.name)
-        {
-            other.transform.parent = transform;
-            child1.transform.position = new Vector3(-1, 0, -1);
+        
+           // other.transform.parent = transform;
+            childx.transform.SetParent(newParent);
+
+            childx.transform.position = new Vector3(x, y, z);
 
             Debug.Log("The right object has entered ");
-        }
+        
     }
 
 
