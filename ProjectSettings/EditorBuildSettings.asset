@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/DemoScene.unity
     guid: 41edc81c7501f0b4fa1e89dd6a60c491
   - enabled: 1
-    path: Assets/Prebuilt Scenarios/Gravity/SolarSystem.unity
+    path: Assets/Prebuilt Scenarios/Gravity/Assets/SolarSystem.unity
     guid: 1dcac326e95c78944988b90e419cc52f
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 1a4c74a968a0fcc49860f9876989b742,
