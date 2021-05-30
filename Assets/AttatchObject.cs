@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Valve.VR.InteractionSystem;
 
 
 public class AttatchObject : MonoBehaviour
 {
     public GameObject EnableThis;
     public string objectName;
-    public GameObject deleteThis;
 
     // Start is called before the first frame update
     void Start()
@@ -24,12 +24,12 @@ public class AttatchObject : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         ///Attatched to object you want to 
-        if (other.name == deleteThis.name) {
-            Destroy(deleteThis);
-
+        if (other.gameObject.name.Equals(objectName)) {
             EnableThis.SetActive(true);
-
             Debug.Log("Deleted game object ");
+            other.GetComponent<Throwable>().enabled = false;
+            other.GetComponent<Interactable>().enabled = false;
+            Destroy(other.transform.gameObject);
         }
 
 
