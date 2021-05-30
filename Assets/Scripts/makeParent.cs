@@ -33,7 +33,14 @@ public class makeParent : MonoBehaviour
             childx.transform.position = new Vector3(x, y, z);
 
             Debug.Log("The right object has entered ");
-        
+
+        //childx.GetComponent<BoxCollider>().enabled = false;
+        // childx.GetComponent<Throwable>().enabled = false;
+        //childx.Destroy(GetComponent<Throwable.cs>());
+        //go.getComponent("component name").setActive(false);
+        //Destroy(childx.GetComponent<Throwable>());
+        //GameObject.Find("testChild").GetComponent<Throwable>().enabled = false;
+
     }
 
 
